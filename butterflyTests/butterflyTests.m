@@ -1,6 +1,6 @@
 //
-//  firstTests.m
-//  firstTests
+//  ButterflyTests.m
+//  ButterflyTests
 //
 //  Created by Aviel on 9/29/20.
 //  Copyright © 2020 Aviel. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface firstTests : XCTestCase
+@interface ButterflyTests : XCTestCase
 
 @end
 
-@implementation firstTests
+@implementation ButterflyTests
 
 - (void)setUp {
     [super setUp];
