@@ -74,14 +74,6 @@
         [toastMessage removeSelf];
     });
     
-    //        toastMessage.translatesAutoresizingMaskIntoConstraints = false
-    //        let bottomConstraint = NSLayoutConstraint(item: toastMessage, attribute: .bottom, relatedBy: .equal, toItem: toastMessage.superview, attribute: .bottom, multiplier: 1, constant: -30.0)
-    //        let leftConstraint = NSLayoutConstraint(item: toastMessage, attribute: .left, relatedBy: .equal, toItem: toastMessage.superview, attribute: .left, multiplier: 1, constant: 10.0)
-    //        let rightConstraint = NSLayoutConstraint(item: toastMessage, attribute: .right, relatedBy: .equal, toItem: toastMessage.superview, attribute: .right, multiplier: 1, constant: -10.0)
-    //        appWindow/* which is: toastMessage.superview */.addConstraints([bottomConstraint, leftConstraint, rightConstraint])
-    //
-    //        let heightConstraint = NSLayoutConstraint(item: toastMessage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 0.3 * max(appWindow.frame.height, appWindow.frame.width))
-    //        toastMessage.addConstraint(heightConstraint)
     
 }
 

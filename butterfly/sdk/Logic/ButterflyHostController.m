@@ -39,12 +39,11 @@
 {
     Reachability *_reachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus remoteHostStatus = [_reachability currentReachabilityStatus];
+    NSString* msg = NSLocalizedString(@"network not avilable", @"network not avilable");
     if (remoteHostStatus == NotReachable) {
         // not reachable
-        [ToastMessage show:@"network not avilable" delayInSeconds:3 onDone:nil];
+        [ToastMessage show:msg delayInSeconds:3 onDone:nil];
         return NO;
-        //    } else if (remoteHostStatus == ReachableViaWiFi) {
-        //        return YES;
     }
     else{
         return YES;
@@ -57,7 +56,6 @@
     
     [request setURL:[NSURL URLWithString:url]];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    //    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setHTTPMethod:@"GET"];
     
     NSString *contentType = [NSString stringWithFormat:@"application/json; charset=utf-8"];
@@ -82,10 +80,6 @@
                                                 NSDictionary *forJSONObject = [NSJSONSerialization JSONObjectWithData:data
                                                                                                               options:kNilOptions
                                                                                                                 error:nil];
-                                                // or
-                                                //                                                NSArray *forJSONArray = [NSJSONSerialization JSONObjectWithData:data
-                                                //                                                                                                        options:kNilOptions
-                                                //                                                                                                          error:nil];
                                                 
                                                 report.country = forJSONObject[@"country"];
                                                 [report printReport];
@@ -98,8 +92,6 @@
     
     
     [task resume];
-    
-    //
     
 }
 
@@ -136,10 +128,6 @@
                                                 NSDictionary *forJSONObject = [NSJSONSerialization JSONObjectWithData:data
                                                                                                               options:kNilOptions
                                                                                                                 error:nil];
-                                                // or
-                                                //                                                NSArray *forJSONArray = [NSJSONSerialization JSONObjectWithData:data
-                                                //                                                                                                        options:kNilOptions
-                                                //                                                                                                          error:nil];
                                                 
                                                 NSLog(@"One of these might exist - object: %@ \n",forJSONObject);
                                                 

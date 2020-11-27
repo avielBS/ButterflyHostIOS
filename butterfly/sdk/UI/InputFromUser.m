@@ -12,92 +12,16 @@
 @implementation InputFromUser
 
 
-
-//- (void)takeTextFromUserWithTitle:(NSString *)title body:(NSString *)body andPlaceHolder:(NSString *)placeHolder cancelTitle:(NSString *) cancelTitle onDone:(void (^)(NSString *))completion {
-//    if (!completion) return;
-//
-//    if (![title length]) {
-//        title = @"More details";
-//    }
-//
-//    if (![body length]) {
-//        body = @"Fill in the details";
-//    }
-//
-//    if (![placeHolder length]) {
-//        placeHolder = @"your insights...";
-//    }
-//
-//    if (![cancelTitle length]) {
-//        cancelTitle = @"Cancel...";
-//    }
-//
-//    UIAlertController* alertController = [UIAlertController alertControllerWithTitle: title message: body preferredStyle: UIAlertControllerStyleAlert];
-//
-//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle: cancelTitle style: UIAlertActionStyleCancel handler: nil];
-//    [alertController addAction: cancelAction];
-//
-//    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-//        textField.placeholder = placeHolder;
-//    }];
-//
-//    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-//        textField.placeholder = @"second holder";
-//    }];
-//
-//    __weak UIAlertController *weakAlertController = alertController;
-//    [alertController addAction: [UIAlertAction actionWithTitle: @"Send..." style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        //[[CrashOps shared] logError: @{@"type":@"issue"}];
-//        NSString *userInput = [[[weakAlertController textFields] firstObject] text];
-//
-//        if (![userInput length]) {
-//            userInput = @"";
-//        }
-//
-//        completion(userInput);
-//    }]];
-//
-//    UIViewController *topViewController = [self mostTopViewController: [[[UIApplication sharedApplication] keyWindow] rootViewController]];
-//    [topViewController presentViewController: alertController animated: YES completion:^{
-//        // ok...
-//    }];
-//}
-//
-//-(UIViewController *) mostTopViewController: (UIViewController *) ofViewController {
-//    UIViewController *presentedViewController = [ofViewController presentedViewController];
-//    if (presentedViewController == nil) {
-//        return ofViewController;
-//    }
-//
-//    return [self mostTopViewController: presentedViewController];
-//}
-
-
 - (void) getUserInput : (UIViewController*)viewController onDone:(void(^)(NSString* , NSString* , NSString*))completion
 {
 
-    
-    //
-//    [self takeTextFromUserWithTitle:@"one" body:@"two"  andPlaceHolder:@"three"  cancelTitle:@"four"  onDone:^(NSString* response) {
-//        NSLog(@"%@", response);
-//    }];
-    //
-    
-    
-    
-    
-//    [self takeTextFromUserWithTitle @"one" body:@"two" andPlaceHolder:@"three" cancelTitle:@"cancle" onDone:{
-//
-//    }];
-    
-    NSString* message = @"1.How and When can we contact you?\n2.Do you want contact from fake place?\n3.comments";
+//    NSString* message = @"Feel free to send here whatever crosses your mind.The information that is sent remains secret without leaving a trail.We take serious consideration and won't take any reckless desicions.Good luck!";
 
-    
+    NSString* message = NSLocalizedString(@"report meesage", @"c");
     _alertController = [UIAlertController alertControllerWithTitle: @"Contact"
                                                                               message: message
                                                                preferredStyle:UIAlertControllerStyleAlert
                                            ];
-
 
     [_alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"e.g. Phone , Email ... before 12 AM";
@@ -125,7 +49,6 @@
         UITextField * fakePlaceField = textfields[1];
         UITextField * commentsField = textfields[2];
         
-  //      NSString * data = [NSString stringWithFormat: @"name : %@ password: %@",namefield.text,passwordfiled.text];
          completion(wayContactField.text,fakePlaceField.text,commentsField.text);
 
     }]];
