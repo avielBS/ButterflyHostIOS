@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  butterfly
+
+  Created by Aviel on 11/30/20.
+  Copyright © 2020 Aviel. All rights reserved.
+*/
+"butterfly_host_report_meesage" = "Feel free to send here whatever crosses your mind.The information that is sent remains secret without leaving a trail.We take serious consideration and won't take any reckless desicions.Good luck!";
+
+"butterfly_host_contact" = "Contact";
+
+"butterfly_host_way_to_contact" = "How to contact you? (e.g phone)";
+"butterfly_host_fake_place" = "Should we present ourself from fake pace? (e.g laundry)";
+"butterfly_host_comments" = "Any comments? (e.g don't call after 4 pm)";
+
+"butterfly_host_send" = "Send";
+"butterfly_host_cancel" = "Cancel";

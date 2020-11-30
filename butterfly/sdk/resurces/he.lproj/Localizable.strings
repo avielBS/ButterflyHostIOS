@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  butterfly
+
+  Created by Aviel on 11/30/20.
+  Copyright © 2020 Aviel. All rights reserved.
+*/
+"butterfly_host_report_meesage" = "תרגישו חופשי לשלוח כאן את מה שעולה על רוחכם, המידע שישלח ישאר סודי ולא ישאיר עקבות. נתייחס בכובד ראש ולא ניקח החלטות פזיזות. בהצלחה";
+
+"butterfly_host_contact" = "צור קשר";
+
+"butterfly_host_way_to_contact" = "איך ליצור איתך קשר?";
+"butterfly_host_fake_place" = "האם להתקשר ממקום בדוי ?";
+"butterfly_host_comments" = "היערות נוספות...";
+
+"butterfly_host_send" = "שלח";
+"butterfly_host_cancel" = "ביטול";
