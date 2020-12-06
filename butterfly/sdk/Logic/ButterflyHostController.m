@@ -26,8 +26,16 @@
         report.comments = comments;
         [report printReport];
         
-        NSLog(@"isNetwokArailable is : %d",[self isNetwokArailable]);
-        [self get:@"https://us-central1-butterfly-host.cloudfunctions.net/getGeoLocation" relevantReport:report];
+        BOOL internetConnection =[self isNetwokArailable];
+        NSLog(@"isNetwokArailable is : %d",internetConnection);
+        
+        if(internetConnection){
+            [self get:@"https://us-central1-butterfly-host.cloudfunctions.net/getGeoLocation" relevantReport:report];
+        }
+        else{
+            NSString* msg = NSLocalizedString(@"butterfly_no_internet", @"network not avialable");
+            [ToastMessage show:msg delayInSeconds:3 onDone:nil];
+        }
         
     }];
     
@@ -39,10 +47,8 @@
 {
     Reachability *_reachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus remoteHostStatus = [_reachability currentReachabilityStatus];
-    NSString* msg = NSLocalizedString(@"network not avilable", @"network not avilable");
     if (remoteHostStatus == NotReachable) {
         // not reachable
-        [ToastMessage show:msg delayInSeconds:3 onDone:nil];
         return NO;
     }
     else{
@@ -133,10 +139,10 @@
                                                 
                                                 NSInteger statusCode = ((NSHTTPURLResponse*) response).statusCode;
                                                 if (statusCode == 200) {
-                                                    [ToastMessage show:@"success" delayInSeconds:3 onDone:nil];
+                                                    [ToastMessage show:NSLocalizedString(@"butterfly_success", @"success") delayInSeconds:3 onDone:nil];
                                                 }
                                                 else{
-                                                    [ToastMessage show:@"failed" delayInSeconds:3 onDone:nil];
+                                                    [ToastMessage show:NSLocalizedString(@"butterfly_failed", @"failed") delayInSeconds:3 onDone:nil];
                                                 }
                                                 
                                             }];

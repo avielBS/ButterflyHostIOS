@@ -146,12 +146,12 @@
 			path = butterflyUITests;
 			sourceTree = "<group>";
 		};
-		306B741225753DB3001EDFEA /* resurces */ = {
+		306B741225753DB3001EDFEA /* resources */ = {
 			isa = PBXGroup;
 			children = (
 				306B741025753C7A001EDFEA /* Localizable.strings */,
 			);
-			path = resurces;
+			path = resources;
 			sourceTree = "<group>";
 		};
 		306E8036255BDB5A000FE655 /* UI */ = {
@@ -168,7 +168,7 @@
 		306E8040255D2102000FE655 /* sdk */ = {
 			isa = PBXGroup;
 			children = (
-				306B741225753DB3001EDFEA /* resurces */,
+				306B741225753DB3001EDFEA /* resources */,
 				306E80412563E74B000FE655 /* Logic */,
 				30146BE52523451D00D0C623 /* ViewController.h */,
 				30146BE32523451D00D0C623 /* AppDelegate.m */,

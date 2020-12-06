@@ -5,9 +5,15 @@
   Created by Aviel on 11/30/20.
   Copyright © 2020 Aviel. All rights reserved.
 */
+
+"butterfly_success" = "נשלח";
+"butterfly_failed" = "נכשל";
+
+"butterfly_no_internet" = "אין חיבור לאינטרנט";
+
 "butterfly_host_report_meesage" = "תרגישו חופשי לשלוח כאן את מה שעולה על רוחכם, המידע שישלח ישאר סודי ולא ישאיר עקבות. נתייחס בכובד ראש ולא ניקח החלטות פזיזות. בהצלחה";
 
-"butterfly_host_contact" = "צור קשר";
+"butterfly_host_contact" = "דיווח אנונימי";
 
 "butterfly_host_way_to_contact" = "איך ליצור איתך קשר?";
 "butterfly_host_fake_place" = "האם להתקשר ממקום בדוי ?";
